@@ -1,4 +1,4 @@
-package GoogleTest;
+package tests;
 
 import org.junit.jupiter.api.Test;
 
@@ -15,5 +15,16 @@ public class GoogleTests {
         $(byName("q")).setValue("Selenide").pressEnter();
         
         $("html").shouldHave(text("Selenide"));
+    }
+}
+
+class YandexTest {
+    @Test
+    void selenideYandexSearchTest() {
+        open("https://yandex.ru/");
+
+        $(byName("text")).setValue("selenide").pressEnter();
+
+        $("#search-result").shouldHave(text("selenide"));
     }
 }
