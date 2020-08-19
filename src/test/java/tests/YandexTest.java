@@ -1,3 +1,9 @@
+package tests;
+
+import org.junit.jupiter.api.Test;
+
+import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -11,7 +17,7 @@ public class YandexTest {
     @Test
     void selenideYandexSearchTest() {
         // Открыть google
-        open(YndexUrl);
+        open(YandexUrl);
 
         // Ввести Selenide в поиск
         $(byName("q")).setValue(SearchCriteria)
