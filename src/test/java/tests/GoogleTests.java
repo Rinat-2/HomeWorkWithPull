@@ -18,13 +18,3 @@ public class GoogleTests {
     }
 }
 
-class YandexTest {
-    @Test
-    void selenideYandexSearchTest() {
-        open("https://yandex.ru/");
-
-        $(byName("text")).setValue("selenide").pressEnter();
-
-        $("#search-result").shouldHave(text("selenide"));
-    }
-}
