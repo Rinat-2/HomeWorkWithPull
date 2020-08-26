@@ -25,5 +25,6 @@ public class YandexTest {
 
         // Проверить, что Selenide появился в результатах поиска
         $("html").shouldHave(text(SearchCriteria));
+        //Тестовый комментарий для ПР   
     }
 }
